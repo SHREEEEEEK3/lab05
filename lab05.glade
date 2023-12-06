@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.38.2 -->
+<interface>
+  <requires lib="gtk+" version="3.24"/>
+  <object class="GtkListStore" id="List1">
+    <columns>
+      <!-- column-name id1 -->
+      <column type="gint"/>
+      <!-- column-name name1 -->
+      <column type="gchararray"/>
+      <!-- column-name image1 -->
+      <column type="GdkPixbuf"/>
+    </columns>
+  </object>
+  <object class="GtkListStore" id="List2">
+    <columns>
+      <!-- column-name imgnsel -->
+      <column type="gchararray"/>
+    </columns>
+    <data>
+      <row>
+        <col id="0" translatable="yes">Apelsin</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Chernika</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Grusha</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Klubnika</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Limon</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Vinograd</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Vishnya</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Yabloko</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Zemlyanika</col>
+      </row>
+    </data>
+    <signal name="row-changed" handler="on_List2_row_changed" swapped="no"/>
+  </object>
+  <object class="GtkWindow" id="Window">
+    <property name="can-focus">False</property>
+    <property name="title" translatable="yes">g21_tihonov lab05 c</property>
+    <property name="default-width">400</property>
+    <property name="default-height">400</property>
+    <child>
+      <object class="GtkBox">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <property name="margin-start">20</property>
+        <property name="margin-end">20</property>
+        <property name="margin-top">20</property>
+        <property name="margin-bottom">20</property>
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="GtkBox">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="margin-bottom">20</property>
+            <child>
+              <object class="GtkLabel">
+                <property name="width-request">50</property>
+                <property name="height-request">30</property>
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="halign">center</property>
+                <property name="valign">center</property>
+                <property name="margin-end">20</property>
+                <property name="label" translatable="yes">ID:</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkEntry" id="Entry1">
+                <property name="height-request">30</property>
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="pack-type">end</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkBox">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="margin-bottom">20</property>
+            <child>
+              <object class="GtkLabel">
+                <property name="width-request">50</property>
+                <property name="height-request">30</property>
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="halign">center</property>
+                <property name="valign">center</property>
+                <property name="margin-end">20</property>
+                <property name="label" translatable="yes">Name:</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkEntry" id="Entry2">
+                <property name="height-request">30</property>
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="pack-type">end</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkComboBox" id="Combo">
+            <property name="width-request">400</property>
+            <property name="height-request">40</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="halign">center</property>
+            <property name="valign">center</property>
+            <property name="margin-bottom">20</property>
+            <property name="model">List2</property>
+            <child>
+              <object class="GtkCellRendererText" id="d1"/>
+              <attributes>
+                <attribute name="text">0</attribute>
+              </attributes>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="Button">
+            <property name="label" translatable="yes">Enter</property>
+            <property name="width-request">200</property>
+            <property name="height-request">45</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <property name="halign">center</property>
+            <property name="valign">center</property>
+            <property name="margin-bottom">20</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">3</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkTreeView">
+            <property name="width-request">500</property>
+            <property name="height-request">300</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="halign">center</property>
+            <property name="valign">center</property>
+            <property name="model">List1</property>
+            <property name="enable-grid-lines">both</property>
+            <child internal-child="selection">
+              <object class="GtkTreeSelection" id="Table"/>
+            </child>
+            <child>
+              <object class="GtkTreeViewColumn">
+                <property name="sizing">autosize</property>
+                <property name="title" translatable="yes">ID</property>
+                <child>
+                  <object class="GtkCellRendererText"/>
+                  <attributes>
+                    <attribute name="text">0</attribute>
+                  </attributes>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkTreeViewColumn">
+                <property name="spacing">10</property>
+                <property name="sizing">autosize</property>
+                <property name="title" translatable="yes">NAME</property>
+                <property name="expand">True</property>
+                <child>
+                  <object class="GtkCellRendererText"/>
+                  <attributes>
+                    <attribute name="text">1</attribute>
+                  </attributes>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkTreeViewColumn" id="c3">
+                <property name="sizing">autosize</property>
+                <property name="title" translatable="yes">IMAGE</property>
+                <child>
+                  <object class="GtkCellRendererPixbuf"/>
+                  <attributes>
+                    <attribute name="pixbuf">2</attribute>
+                  </attributes>
+                </child>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">4</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
